@@ -1,6 +1,6 @@
 ### Graphs
 
-- Reprentation of graphs
+- Representation of graphs
 ``vector<vector<int>> g(_size_)`` or ``vector<int> g[]`` - can be represented as an array of vectors or as a vector of vectors.
 
 - an edge in graph. Let's say between a-b entry in the graph would be happening to you

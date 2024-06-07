@@ -24,9 +24,11 @@ using namespace std;
 void dfs(vector<vector<int>> &g, vector<bool> &vis, int source){
     // DFS
     vis[source] =  true;
+    // here we will print source
     cout << source << " ";
 
     for(int u : g[source]){
+        // if not visited then do dfs from that node 
         if(!vis[u]) dfs(g, vis, u);
     }
 }
