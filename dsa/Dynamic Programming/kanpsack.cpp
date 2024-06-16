@@ -1,8 +1,6 @@
 /*
  *
  *
- KnapScak Dp function :
-
  input : given the weight and max capacity calculate maximum profit
 
  types of questions :
