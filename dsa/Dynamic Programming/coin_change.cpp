@@ -11,7 +11,7 @@ using namespace std;
 
 void coin_change_dp(vector<int> coins, int sum){
     //  sapce and time - O(n x sum)
-    //  dp table ------
+    //  dp table ------>
     // n\s ----->
     // |   0   1   2   3   4
     //   | 1 | 0 | 0 | 0 | 0 |
