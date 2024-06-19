@@ -1,6 +1,7 @@
 /*
  * 
  * DFS - Depth first search
+ * it is recursive in nature
  * used when neccessory
  *
  * search one child then its hold connection of the child, then goes for the other one
@@ -13,7 +14,13 @@
  *
  *  to read this tree using dfs output will be A a c b d 
  *
- *
+ *  0 -- 1
+ *  |    | \
+ *  |    |   4
+ *  |    | /
+ *  2 -- 3
+ *  
+ *  ans : 0 1 3 2 4 or 0 1 4 3 2
  * */
 
 
@@ -24,7 +31,7 @@ using namespace std;
 void dfs(vector<vector<int>> &g, vector<bool> &vis, int source){
     // DFS
     vis[source] =  true;
-    // here we will print source
+    // print the source
     cout << source << " ";
 
     for(int u : g[source]){
@@ -38,6 +45,10 @@ void addEdge(vector<vector<int>> &g, int u, int v){
     // by adding u in v's vector and vice versa
     g[u].push_back(v);
     g[v].push_back(u);
+}
+
+void dfs_for_disconnected_graph(vector<vector<int>> &g, vector<bool> &vis){
+    for(int i=0; i<vis.size(); i++) if(vis[i] == false) dfs(g, vis, i); // only extra change is to add one more loop to check for all nodes
 }
 
 void show_graph(vector<vector<int>> &g){

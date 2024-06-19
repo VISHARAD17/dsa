@@ -2,6 +2,10 @@
  * Logest Incresing subsequence
  * problem : pick zero or more elements of a give array which are in increasing or non-decreasing order (ele need not be consequent)
  *
+ * variations :
+ * 1. minimum deletions to make array sorted : n - lis
+ * 2. Maximum sum increasing subsequence : same logic as lis but instead of len need to consider array ele value
+ * 3. 
  * */
 
 #include <algorithm>
@@ -21,8 +25,6 @@ int iterative_lis(vector<int> a, int n){
             if(a[i] > a[j]) lis[i] = max(lis[i], lis[j]+1);
         }
     }
-    for(auto &x: lis) cout << x << " ";
-    cout << "\n";
 
     return *max_element(lis.begin(), lis.end());
 }

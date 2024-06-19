@@ -1,4 +1,4 @@
-### Operating systems
+## Operating systems
 
 - Manger or incharge for our systems
 
@@ -12,7 +12,7 @@ hardware (CPU, HDD, memory)
 
 __________________________________________________________________________________________
 
-- Reason for operating system to exists 
+* Reason for operating system to exists 
     - Resource mangement : We have limited resource for a particular machine. it manages which application or process to run in backgroud. handles
                            multiple applications.
     - Abstraction : operating system extracts the hardware ( talks to them), we don't need to write machine/binary code. It provides system calls to

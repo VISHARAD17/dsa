@@ -6,7 +6,7 @@
     - Memoization ( top down )
     - Tabulation ( Bottom up )
 
------------------------------------------------------------
+_______________________________________________________________________________
 
 Fibonacci series :
 
@@ -48,3 +48,10 @@ int fib(n){
     return dp[n];
 }
 ```
+
+Dynamic Programming problems :
+1. coin change
+2. edit distance
+3. LCS - Longest Common Subsequence
+4. Longest Increasing Subsequence
+5. 
