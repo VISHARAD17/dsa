@@ -30,7 +30,6 @@ using namespace std;
 void bfs(vector<vector<int>>adj, int s){
     const int vertices = adj.size();
     vector<bool>visited(vertices+1, false);
-
     queue<int>q;
     visited[s] = true;
     q.push(s);
