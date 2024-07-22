@@ -31,6 +31,6 @@ ________________________________________________________________________________
     - very basic/simple operating systems
     - only one process can exists in RAM and can run at a time 
     - cons : CPU has to sit ideal during IO
-    - ex. MS DOS
+    - ex. MS-DOS
 
 
