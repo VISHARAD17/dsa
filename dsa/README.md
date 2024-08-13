@@ -1,9 +1,5 @@
 ### DSA Notes
 
-- Dynamic Programming
-- Graphs
-- Trees
-    - binary search tress
-    - Balance Trees
-    - red black Trees
-- more DSA below
+index page
+
+- [Dyanamic Programming Notes](/dsa/Dynamic%20Programming/dynamic_programming.md)
