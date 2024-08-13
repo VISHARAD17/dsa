@@ -50,7 +50,6 @@ ________________________________________________________________________________
 ----------------------------------
 ### Multi-threading introduction:
 
-##### Multitasking vs Multi-threading
 - **Multi-tasking** : doing multiple tasks and the same time. Ex. listening to music and browsing
 web. Here, we are performing two diff. tasks at the same time.
 - **Multi-threading** : doing multiple things within a process or task. Ex. downloading something
@@ -61,5 +60,19 @@ in browser and browsing. Here, we're doing different things within a same browse
         - word processor : typing, saving, formatting and spell-checking happens at the same
         time
         - web servers : Apache HTTP servers uses thread pools
-- Advantages vs Disadvantages
+        - IDEs : Modern IDEs do compilation, error checks while we write the code
+        - Games : In modern game multiple objects are implemented on multiple threads
+- **Advantages of Multi-threading**:
+    - Parallelism and improved performance
+    - Responsiveness
+    - Better resource utilization
+- **Disadvantages** :
+    - Difficulty in writing, testing and debugging code : when running a multi-threaded program we might
+    get different results when ran on different time, hence difficult to reproduce the error
+    - can lead to deadlock and race condition : race condition happens when we have shared variables across different classes
+    or when multiple threads are working on same shared variable.
+    ex. need to increment a variable twice and print it : sometimes 2 threads increment them at the same time and print
+    it resulting it getting incremented only 1 time.
+    deadlock happens when a resource required by a thread_1 is held by thread_2 and resource required by thread_2 is held
+    by thread_1, resulting in circular dependency kind of situation. Here, no thread can proceed further.
 
