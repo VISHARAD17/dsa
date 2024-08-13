@@ -1,4 +1,4 @@
-## Operating systems
+### Operating systems introduction
 
 - Manger or incharge for our systems
 
@@ -76,3 +76,15 @@ in browser and browsing. Here, we're doing different things within a same browse
     deadlock happens when a resource required by a thread_1 is held by thread_2 and resource required by thread_2 is held
     by thread_1, resulting in circular dependency kind of situation. Here, no thread can proceed further.
 
+### Process vs threads
+ - threads are stack of their own function calls
+ - all threads have same heap segment, same data and same code
+ - **threads vs process**
+    - Threads are lightweight. Faster/easier to create/terminate threads
+    - Multiple threads in the same process :
+        - share same address space
+        - Easier to communicate
+        - context switching is easier ( switching context from one process to other process is computationally
+        intensive. we need to store the state of the current process and we need to resume the other process. Memory mapping need to be changed
+        and cache needs to be cleared, etc. However, incase of threads only stack pointer register need to change). This faster 
+        especially when threads are in userspace and kernel is not involved.
