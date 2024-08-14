@@ -55,3 +55,4 @@ and brings more process in RAM for better efficiency
 state. ( This is also in hard disk). This is hard disk space 
 is called swap space. Then it goes to ready state with CPU is free otherwise if a high-priority tasks comes up 
 then it gets suspended back to suspend/ready state.
+
