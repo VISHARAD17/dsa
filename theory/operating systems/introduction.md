@@ -1,4 +1,5 @@
 ### Operating systems introduction
+[Article](https://www.geeksforgeeks.org/batch/sde-theory-1/track/Introduction-to-Operating-System/article/MjgxOA%3D%3D)
 
 - Manger or incharge for our systems
 
@@ -23,7 +24,7 @@ ________________________________________________________________________________
 __________________________________________________________________________________________
 
 ### Types of Operating systems
-
+[Article](https://www.geeksforgeeks.org/batch/sde-theory-1/track/Introduction-to-Operating-System/article/MTY5NA%3D%3D)
 * Single tasking :
     - very basic/simple operating systems
     - only one process can exists in RAM and can run at a time 
@@ -49,6 +50,7 @@ ________________________________________________________________________________
     - Divide multiple threads into multiple processors and multiple processors into multiple processes
 ----------------------------------
 ### Multi-threading introduction:
+[Article](https://www.geeksforgeeks.org/batch/sde-theory-1/track/Introduction-to-Operating-System/article/MTc5OQ%3D%3D)
 
 - **Multi-tasking** : doing multiple tasks and the same time. Ex. listening to music and browsing
 web. Here, we are performing two diff. tasks at the same time.
@@ -77,6 +79,7 @@ in browser and browsing. Here, we're doing different things within a same browse
     by thread_1, resulting in circular dependency kind of situation. Here, no thread can proceed further.
 
 ### Process vs threads
+[Article](https://www.geeksforgeeks.org/batch/sde-theory-1/track/Introduction-to-Operating-System/article/MjU4NQ%3D%3D)
  - threads are stack of their own function calls
  - all threads have same heap segment, same data and same code
  - **threads vs process**
@@ -88,3 +91,29 @@ in browser and browsing. Here, we're doing different things within a same browse
         intensive. we need to store the state of the current process and we need to resume the other process. Memory mapping need to be changed
         and cache needs to be cleared, etc. However, incase of threads only stack pointer register need to change). This faster 
         especially when threads are in userspace and kernel is not involved.
+
+### User threads vs Kernel threads
+[Article](https://www.geeksforgeeks.org/batch/sde-theory-1/track/Introduction-to-Operating-System/article/ODMy)
+- Simple threads which are managed by user space are user threds whereas threads managed by kernel space are kernel Threads
+- **User threads**
+    - context switching : Fast ( as no mode switch is required cause they are in the same
+    process)
+    - Blocking : One thread can block all other threads ( since kernel is not aware of user managed threds
+    it blocks entire process including threads)
+    - Multicore or Multi-processing : cannot take advantage of Multicore system. only concurrent execution
+    on single processor i.e. while on process is doing I/O other process will do CPU utilization
+    - creation / termination : Fast
+- **Kernel threads**
+    - context switching: Slow. Mode switch is required from user to Kernel 
+    and kernel needs to be involved
+    - Blocking : A thread can only block itself only
+    - Multicore or Multi-processing : can take full advantage of multicore system.
+    - creation / termination : Slow
+- We can have both type threads in a process i.e. mix of user threads and kernel threadsSLow
+- **Mapping of user threads to kernel threads** :
+    - One to One : Every user thread creates a kernel thread ( most common )
+    - One to Many : When we create multiple threads in a process, all are mapped to a single kernel thread 
+    . This can be seen as purely user managed multi-threaded system. Context switching is faster. since, only
+    kernel is managing only one thread.
+    - Many to Many : Multiple user threads are mapped to multiple kernel threads
+
