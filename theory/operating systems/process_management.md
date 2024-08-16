@@ -56,3 +56,25 @@ state. ( This is also in hard disk). This is hard disk space
 is called swap space. Then it goes to ready state with CPU is free otherwise if a high-priority tasks comes up 
 then it gets suspended back to suspend/ready state.
 
+### Process Control Block
+- A process can be moved from ready to running state and vice versa. It has to moved from running to ready 
+when time allocated to it expires or a high priority task comes into memory. Hence, in order to resume 
+the previous task from the same state where it was stoped OS must store all the information related to
+the process. The process should feel like it is continuing from the same spot. All this information is 
+stored in a data structure called Process control block. It is stored in a very secured place in a memory 
+as to be not currupted by any user process.
+
+- **Contents of Process control block**:
+    - process ID : unique identifier assigned to every process by OS 
+    - process state : state of the process ex. ready, running, etc.
+    - CPU registers : process uses mutiple CPU registers to perform its operation. One of them is 
+    program counter which tells next intruction to be executed. Hence, they are also stored in order 
+    to run the process form the previous state where it was stopeed.
+    - Accounts information : CPU time consumed so far, any systerm specific information 
+    - I/O information : what I/Os process was using and what was there states. 
+    - CPU scheduling information : priority of the process 
+    - memory information : what all memory blocks were allocated to this process.
+
+- these are generic fields stored in a control block, there are many more fields in today's modern complex OS.
+- It is the most central data structure of the OS and used by almost all modules( ex. I/O module ) of OS
+
