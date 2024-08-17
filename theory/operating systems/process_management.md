@@ -147,5 +147,69 @@ for CPU
 - Avg. waiting time: when CPU bound process comes first it increses waiting time
 
 ### Shorted jop first algorithm:
- 
- 
+- consider the jobs in increasing order of their CPU busrt time. 
+- this algorithm is both non-preemptive and non-preemptive
+- **non-preemptive** :
+ given three 4 processes `P_0`, `P_1`, `P_2` and `P_3` arrives at time 0, 1, 2 and 3 sec respectively.
+ Their CPU burst times are 5, 4, 3, and 8 respec. since it a non-preemptive algo. we cannot take back 
+ the CPU once assigned. So, for first 5 seconds `P_0` will be assigned the CPU, by the 5th second all remaining 
+ three tasks will be in the queue. 
+ ```
+Giant chart :
+|----------------------------------------
+| P_0    |  P_2   |  P_1    |    P_3    |
+|----------------------------------------
+0        5        8         12          20
+```
+- Preemtive algorithm :
+ given three 4 processes `P_0`, `P_1`, `P_2` and `P_3` arrives at time 0, 1, 2 and 3 sec respectively.
+ Their CPU burst times are 8, 4, 9, and 5 respec. At the 0th second only `P_0` has their in the queue but 
+ while it is being executed, at the 1st sec `P_1` arrive with 4 sec of burst time while for `P_0` 7 sec 
+ of burst time is required to perform the remaining execution. Since, the current burst time is 
+less more the burst time of incomming one hence incomming one i.e. `P_1` is given priority.
+Similary, it is done for scheduling remaining taks
+ ```
+Giant chart :
+|-----------------------------------------------------
+| P_0 |    P_1   |  P_3    |    P_0    |      P_2    |
+|-----------------------------------------------------
+0     1          5         10          17           26 
+```
+- main points for Preemtive shorted job first algorithm:
+    - Minimum average waiting time among all the scheduling algorithm ( gives priority to I/O bound 
+    taks which has less CPU busrt time compared to CPU bound taks)
+    - May cause high waiting time and response time for CPU bound tasks
+    - Impractical ( OS might not know the burst time of taks in adavance)
+
+### Priority Scheduling 
+- Priority scheduling can be Preemtive or non-preemptive
+- processes are selected based on their priority, if same priority then one with lessor burst time is 
+selected.
+
+| Process  | arrival time | priority | burst time |
+|---|---|---|---|
+|`P_0`|0|5|3|
+|`P_1`|1|3|5|
+|`P_2`|2|15|8|
+|`P_3`|3|12|6|
+
+`P_2` is the highest priority
+```
+Giantt chart for Preemtive scheduling :
+|----------------------------------
+|  P_0 |    P_2    |   P_3  | P_1 |
+|----------------------------------
+0     3            11      13     22
+```
+
+
+```
+Giantt chart for non-preemptive scheduling:
+|---------------------------------------------
+|  P_0 |    P_2    |   P_3     | P_0 |  P_1  |
+|---------------------------------------------
+0     2            10          16    17      22
+```
+- problem in priority scheduling is that if a low priority tasks comes in ready state and highi priority 
+tasks keep comming then low priority task never gets CPU, this situation is called starvation. to avoid this 
+Aging methos is used which is if a taks is waiting for so long its priority increasises.
