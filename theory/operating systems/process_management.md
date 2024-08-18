@@ -213,3 +213,14 @@ Giantt chart for non-preemptive scheduling:
 - problem in priority scheduling is that if a low priority tasks comes in ready state and highi priority 
 tasks keep comming then low priority task never gets CPU, this situation is called starvation. to avoid this 
 Aging methos is used which is if a taks is waiting for so long its priority increasises.
+
+
+### Round robin Scheduling algorithm
+- it uses time quantam and circular queue ( ready queue ), Preemtive in nature.
+- Average waiting time is higher but good response time 
+- maintain a time quantam say 2 units, we pick one by one task from the queue in circular manner, give then 2 units of time ( time quantam ), 
+if process is going to take less than 2 units then it finishes, otherwise it preemp this process and move to next one. This repeats in circular
+manner
+- sensitive to time quantam
+    - higher : becomes FCFS 
+    - smaller : context switch overload
