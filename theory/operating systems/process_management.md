@@ -224,3 +224,37 @@ manner
 - sensitive to time quantam
     - higher : becomes FCFS 
     - smaller : context switch overload
+
+| Process  | arrival time | burst time |
+|---|---|---|
+|`P_0`|0|3|
+|`P_1`|1|1|
+|`P_2`|1|5|
+
+```
+Giantt chart:
+
+|----------------------------------------
+|  P_0 | P_1 |   P_2    | P_0 |  P_2    |
+|----------------------------------------
+0     2      3         5      6         9
+```
+
+### Multilevel queue scheduling
+- Divide ready queue into multiple queue and based on nature of processes apply algorithm. For ex. 
+some processes need quick response so put them in a queue and apply round robin. Some processes might 
+required to apply FCFS algorithm ( they might be dependent on each other), so put them in a diff. queue 
+and apply FCFS. 
+- queues are sorted based on priority, highest one goes on top.
+- there is a problem of starvation if high priority queues keep coming then the one with lowest priority 
+queue might not get the CPU resulting in starvation
+- flexibility of using different scheduling algorithms
+- ex. foreground process (high priority ) and Backgroud process ( low priority ) ( 2 queues )
+
+### Multilevel queue with feedback scheduling 
+- most used scheduling algorithm in Operating systems
+- avoids starvation using feedback ( drawback of executing process queue based on priority)
+- adds a aging factor to the lower priority processes if they are waiting for long time and move them 
+up to higher priority queues
+- 
+
