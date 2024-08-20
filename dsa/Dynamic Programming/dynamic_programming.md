@@ -52,7 +52,7 @@ int fib(n){
 Dynamic Programming problems / variations :
 1. Napsack 0-1
 2. Napsack
-1. [Coin change]()
+1. [Coin change](./coin_change.cpp)
 2. edit distance
 3. LCS - Longest Common Subsequence
 4. Longest Increasing Subsequence
