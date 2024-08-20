@@ -3,7 +3,7 @@
 ### DSA 
 - [Dynamic Programming](/dsa/Dynamic%20Programming/dynamic_programming.md) 
 
-### theory notes
+### CS-theory notes
 - [Operating systems](/theory/operating%20systems/operating_system.md)
 - [DBMS](/theory/dbms/dbms.md)
 - [SQL]()
