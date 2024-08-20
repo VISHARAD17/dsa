@@ -1,4 +1,5 @@
-### Process Management
+## Process Management
+### Introduction
 - Program is something that resides on the hardware ( ex. code file ) and compiler converts it into 
 binary programe - this file ( a.out for c++ ) also exists on hard disk. This binary program is then
 loaded into the ram and then run by the processor. So, **process is a program is execution**
