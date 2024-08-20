@@ -50,11 +50,9 @@ int fib(n){
 ```
 
 Dynamic Programming problems / variations :
-1. Napsack 0-1
-2. Napsack
-1. [Coin change](./coin_change.cpp)
-2. edit distance
-3. LCS - Longest Common Subsequence
-4. Longest Increasing Subsequence
-5. something new problem in Dynamic Programming
-6. more dynamic programming problems
+- [Coin change](./coin_change.cpp)
+- [Edit distance](./edit_distance.cpp)
+- [Longest common subsequence](./LCS.cpp)
+- [Longest increasing subsequence](./logest_increasing_subsequence.cpp)
+- [Maximum cuts](./maximum_cuts.cpp)
+- [Minimum coins](./min_coins.cpp)
