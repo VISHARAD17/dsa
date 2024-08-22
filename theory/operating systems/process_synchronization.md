@@ -16,4 +16,5 @@ interleaving exexution is called concurrent execution
 - we can see different behaviousrs / different unexpected outputs because of race conditions
 
 ### Critical Section
-- 
+- Race condition : when we have inconsistent values because of different sequence of execution, when two processes are interlived.
+Also we might get different outputs depending on the order of execution
