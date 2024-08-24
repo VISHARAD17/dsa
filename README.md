@@ -6,5 +6,5 @@
 ### CS-theory notes
 - [Operating systems](/theory/operating%20systems/operating_system.md)
 - [DBMS](/theory/dbms/dbms.md)
-- [SQL]()
+- [SQL](/theory/sql/sql.md)
 - [computer networks](/theory/computer%20networks/computer_networks.md)
