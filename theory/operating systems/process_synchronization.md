@@ -16,5 +16,30 @@ interleaving exexution is called concurrent execution
 - we can see different behaviousrs / different unexpected outputs because of race conditions
 
 ### Critical Section
-- Race condition : when we have inconsistent values because of different sequence of execution, when two processes are interlived.
-Also we might get different outputs depending on the order of execution
+- Race condition : when we have inconsistent values because of different sequence of 
+execution, when two processes are interlived.
+Also we might get different outputs depending on the order of execution. So, there is no 
+deterministic variable
+- the part where we access shared variable is `critical` section and 
+otherohter part it `not-critical` section
+- hence, we need same machanism to ensure that one process run a critical process 
+at a time
+- so we put some logic before (`entry section`) and after (`exist section`) critical section
+- critical section comes when we have write/modify operation on a shared variable
+
+### Goals of Synchronization mechanism :
+- `Mutual exclusion`: only one process is allowed to enter critical sectionExecution
+- `Progress`: processes that do not need/wish to enter critical section should not 
+be blocking other processes. So, only processes that requires critical section should 
+only compete
+- `Bounded waiting / Fairness` : it should not happen that a process is waiting forever 
+to entire into critical section and other processes are getting to use critical section 
+again and again or processes comming after it are getting to use critical section.
+Hence, there should be bound on waiting for critical section 
+- `performance`: locking mechanism that allows one process at a time to enter into 
+critical section should be fast. Types of locking mechanisms: hardware and software
+
+### Overview of Synchronization mechanisms :
+- Disabling interepts : a process before entiring into a critical section declares 
+that it should not be interepted while doing its execution. This only works for single 
+processor system. OS disables other processes from entering into the critical section
