@@ -2,6 +2,7 @@
 
 ### DSA 
 - [Dynamic Programming](/dsa/Dynamic%20Programming/dynamic_programming.md) 
+- [Graph](/dsa/graphs.md)
 
 ### CS-theory notes
 - [Operating systems](/theory/operating%20systems/operating_system.md)
