@@ -40,6 +40,14 @@ Hence, there should be bound on waiting for critical section
 critical section should be fast. Types of locking mechanisms: hardware and software
 
 ### Overview of Synchronization mechanisms :
-- Disabling interepts : a process before entiring into a critical section declares 
+- `Disabling interepts` : a process before entiring into a critical section declares 
 that it should not be interepted while doing its execution. This only works for single 
-processor system. OS disables other processes from entering into the critical section
+processor system. OS disables other processes from entering into the critical section.
+This might accquire system forever and disables other process from happneing( serious issue )
+Hence, not fesible, can cause security issues as well.
+- `Locks ( Mutex )` : acquire the lock, then enter the critical section then release the lock.
+they can be implmented in software and hardware. Whereas hardware is mnost common, because its 
+fast.
+- `Semaphore` : It has two things single and wait. When a process enters a critical section
+it causes wait and when it's done then it causes single which means other processes can 
+enter into critical section
