@@ -48,6 +48,20 @@ Hence, not fesible, can cause security issues as well.
 - `Locks ( Mutex )` : acquire the lock, then enter the critical section then release the lock.
 they can be implmented in software and hardware. Whereas hardware is mnost common, because its 
 fast.
-- `Semaphore` : It has two things single and wait. When a process enters a critical section
+- `Semaphore` : It has two things signal and wait. When a process enters a critical section
 it causes wait and when it's done then it causes single which means other processes can 
-enter into critical section
+enter into critical section. these signal and wait processes need to be atomic, to ensure 
+they are atomic they uses locks
+- `Monitors`:
+    - monstly used for threads synchronization.
+    - it is implemented in Java. JVM ( java virtual machine ) manages the synchronization 
+    hence, it is a software solution.
+    - They operate at a higher level than semaphore.
+    - Instead of putting enter and exit section, before and after resp. of a critical 
+    section. All the shared variables and the methods modifying shared variables are put 
+    in a same class. All methods in that class are declared synchronous. So that, single 
+    process / single thread can run at a time.
+
+### `Lock` mechanism for synchronization :
+- They mechanism are used to build mechanisms like semaphore, Monitors, etc.
+-  
