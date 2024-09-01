@@ -28,7 +28,7 @@ at a time
 - critical section comes when we have write/modify operation on a shared variable
 
 ### Goals of Synchronization mechanism :
-- `Mutual exclusion`: only one process is allowed to enter critical sectionExecution
+- `Mutual exclusion`: only one process is allowed to enter critical section for execution
 - `Progress`: processes that do not need/wish to enter critical section should not 
 be blocking other processes. So, only processes that requires critical section should 
 only compete
@@ -64,4 +64,29 @@ they are atomic they uses locks
 
 ### `Lock` mechanism for synchronization :
 - They mechanism are used to build mechanisms like semaphore, Monitors, etc.
-- notes on locs  
+- when one process is in critical condition, lock is true that means other processes cannot 
+enter the critical condition, when the process is done it releases the lock ( lock is set to false )
+allowing other processes to enter the critical section ( but only one at a time )
+- This mechanism does not garranty mutual exclusion. because, is the process in critical Section
+gets premptive before it executes ( just enters and got prempt ) its operation, then other process might enter resulting in two processes
+in critical section, this creates race condition
+- to avoid this there is a hardware solution known as `test and set` or `TSL Lock` -> having an 
+atomic operation with a set of instructions to acquire the lock, so that no one can acquire the lock.
+
+### Semaphore :
+- in lock mechanism we have to keep running while loop to check the status of the lock, 
+in other words we have to wait for it to change, this is known as busy waiting. Also, there is 
+not bounded waiting for previous lock based solution.
+- semaphore consits of count variable and queue
+- count represents number of available resources at that time and queue represents the queue of process that need to be 
+executed.
+- when a process is in critical section it calls wait process and after using critical section it 
+calls signale process. wait call decreases the current count and signal call increases the current count.
+- `Restroom analogy` : people want to use restromms and all restrooms are locked, each restroom can be 
+used by 1 person at time. To access the restroom person needs to use key to unlock the lock on the door
+This analogy is used to explain the synchronization mechanisms.
+- here, in semaphore, single is given once a person is done using washroom, which increases the count of 
+available washroom.
+- In semaphore process do not need to wait, once there is a free slot it gives a signal to wake one of 
+the processes in the queue and ask them to use the available resources
+- this type of semaphore is also called as counting semaphore.
