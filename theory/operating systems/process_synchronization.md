@@ -64,4 +64,4 @@ they are atomic they uses locks
 
 ### `Lock` mechanism for synchronization :
 - They mechanism are used to build mechanisms like semaphore, Monitors, etc.
--  
+- notes on locs  
