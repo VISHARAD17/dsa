@@ -78,6 +78,13 @@ atomic operation with a set of instructions to acquire the lock, so that no one 
 in other words we have to wait for it to change, this is known as busy waiting. Also, there is 
 not bounded waiting for previous lock based solution.
 - semaphore consits of count variable and queue
+
+```cpp
+struct sem {
+    int count;
+    queue q;
+}
+```
 - count represents number of available resources at that time and queue represents the queue of process that need to be 
 executed.
 - when a process is in critical section it calls wait process and after using critical section it 
@@ -90,3 +97,13 @@ available washroom.
 - In semaphore process do not need to wait, once there is a free slot it gives a signal to wake one of 
 the processes in the queue and ask them to use the available resources
 - this type of semaphore is also called as counting semaphore.
+
+### Binary semaphore :
+- consists only of a bool and queue
+```cpp
+struct BinSem {
+    bool val;
+    queue q;
+}
+```
+- 
