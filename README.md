@@ -5,7 +5,7 @@
 - [Graph](/dsa/graphs.md)
 
 ### CS-theory notes
-- [Operating systems](/theory/operating%20systems/operating_system.md)
+- [Operating systems](./theory/operating systems/README.md)
 - [DBMS](/theory/dbms/dbms.md)
 - [SQL](/theory/sql/sql.md)
 - [computer networks](/theory/computer%20networks/computer_networks.md)

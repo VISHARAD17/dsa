@@ -2,6 +2,10 @@
  * coin change problem
  * unbounded knapsack problem
  * problem : give a coin array calculate number of ways to pick coins to get given sum, given unlimited supply of each coin
+ *
+ * ex.
+ * sum = 4
+ * coins = []  // size 4
  * */
 
 
@@ -10,14 +14,15 @@
 using namespace std;
 
 void coin_change_dp(vector<int> coins, int sum){
-    //  sapce and time - O(n x sum)
-    //  dp table ------>
-    // n\s ----->
-    // |   0   1   2   3   4
-    //   | 1 | 0 | 0 | 0 | 0 |
-    //   | 1 | 1 | 1 | 1 | 1 |
-    //   | 1 | 1 | 2 | 2 | 3 |
-    //   | 1 | 1 | 2 | 3 | 4 |
+    /* sapce and time - O(n x sum)
+       dp table ------>
+         n\s ----->
+            0   1   2   3   4 
+        0 | 1 | 0 | 0 | 0 | 0 |
+        1 | 1 | 1 | 1 | 1 | 1 |
+        2 | 1 | 1 | 2 | 2 | 3 |
+        3 | 1 | 1 | 2 | 3 | 4 |
+    */
 
     const int n = coins.size();
     vector<vector<int>> dp(n+1, vector<int>(sum+1));
