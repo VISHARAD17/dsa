@@ -21,12 +21,15 @@
 total no. of vertices - 4
  
 Adjacency matrix- 
+```cmd
     0 1 2 3
   ----------
 0 | 0 1 1 0
 1 | 1 0 1 0
 2 | 1 1 0 1
 3 | 0 0 1 0
+
+```
 
 - properties of Adjacency matrix ( v x v)
     * space required : O(n)
@@ -39,11 +42,12 @@ Adjacency matrix-
 
 - # Adjacency array 
 stores only connected node unlike matrix Representation
-
+```
 0 -> 2
 1 -> 2 
 2 -> 0-1-3
 3 -> 2
+```
 
 - properties of Adjacency array/list 
     * space : 0(v+e)
@@ -85,4 +89,5 @@ int main(){
     - cycle detection ( DFS can also be used)
     - Broadcast
 
-
+- Applications of DFS :
+    - island problem on leetcode
