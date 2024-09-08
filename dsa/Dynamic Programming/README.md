@@ -6,14 +6,13 @@
     - Memoization ( top down )
     - Tabulation ( Bottom up )
 
-_______________________________________________________________________________
-
 Fibonacci series :
 
 1. Memoization Solution
 
-time - O(n)
-space - O(n)
+Time - `O(n)`
+
+space - `O(n)`
 
 ```cpp
 vector<int>mem(n+1, -1); // public vector
