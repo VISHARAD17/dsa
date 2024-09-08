@@ -55,3 +55,5 @@ Dynamic Programming problems / variations :
 - [Longest increasing subsequence](logest_increasing_subsequence.cpp)
 - [Maximum cuts](maximum_cuts.cpp)
 - [Minimum coins](min_coins.cpp)
+- [Kanpsack](kanpsack.cpp)
+- [longest sum increasing subsequence](maximum_sum_increasing_subsequence.cpp)
