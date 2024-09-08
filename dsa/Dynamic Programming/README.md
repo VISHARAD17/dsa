@@ -48,8 +48,8 @@ int fib(n){
 }
 ```
 
-Dynamic Programming problems / variations :
-- [Coin change](coin_change.cpp)
+#### Dynamic Programming problems :
+- [Coin change](coin_change.cpp) 
 - [Edit distance](edit_distance.cpp)
 - [Longest common subsequence](LCS.cpp)
 - [Longest increasing subsequence](logest_increasing_subsequence.cpp)

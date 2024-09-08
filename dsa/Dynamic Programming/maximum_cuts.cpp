@@ -1,6 +1,8 @@
 /*
  * Maximum cuts :
  * Given a rod of length n and three values a, b & c. Find out maximum cuts in the rod such that length of every cut is either a or b or c
+ * 
+ * 1)  a, b, c    ans = 
  *
  * */
 

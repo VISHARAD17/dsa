@@ -8,8 +8,8 @@
  * ex. s1 = 'ABCDGH' s2 = 'AEDFHR' ans= 'ADH' len = 3
  *
  * variations :
- * 1.min insertions and deletions to convert  s1 into s2: LCS - L then n-l deletions and m-l insetions 
- * 2. longest palindromic subsequence : s1 and s2 is reverse of s1
+ * 1. min insertions and deletions to convert  s1 into s2: LCS - l is the lcs, then n-l deletions and m-l insetions 
+ * 2. longest palindromic subsequence : s1 and s2 is reverse of s1, so answere is their lcs
  * 3. shortest common supersequence: need to insert charactors which are not present  so ans is L + (n-L) + (m-L);
  * */
 
@@ -18,6 +18,7 @@
 #include <iostream>
 #include <string>
 #include<vector>
+#include <unordered_map>
 using namespace std;
 
 
