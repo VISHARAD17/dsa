@@ -49,11 +49,18 @@ int fib(n){
 ```
 
 #### Dynamic Programming problems :
-- [Coin change](coin_change.cpp) 
-- [Edit distance](edit_distance.cpp)
-- [Longest common subsequence](LCS.cpp)
-- [Longest increasing subsequence](logest_increasing_subsequence.cpp)
-- [Maximum cuts](maximum_cuts.cpp)
-- [Minimum coins](min_coins.cpp)
-- [Kanpsack](kanpsack.cpp)
-- [longest sum increasing subsequence](maximum_sum_increasing_subsequence.cpp)
+- Longest common subsequence and variations
+- Edit distance
+- Longest increasing subsequence and variations
+- Maximum cut
+- Minimum coins
+- Minimum jumps to reach end 
+- 0-1 knapsack
+- Optimal strategy 
+- Egg dropping problem
+- Count BSTs with n keys
+- Maximum sum no two consecutive 
+- Subset sum problem 
+- Matrix chain multiplication
+- Palindrome partition
+- Allocate minimum pages

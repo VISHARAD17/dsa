@@ -17,18 +17,20 @@ void coin_change_dp(vector<int> coins, int sum){
     /* sapce and time - O(n x sum)
        dp table ------>
          n\s ----->
-            0   1   2   3   4 
-        0 | 1 | 0 | 0 | 0 | 0 |
-        1 | 1 | 1 | 1 | 1 | 1 |
-        2 | 1 | 1 | 2 | 2 | 3 |
-        3 | 1 | 1 | 2 | 3 | 4 |
+         | 0 | 1 | 2 | 3 | 4 | 
+       --|---|---|---|---|---|
+       0 | 1 | 0 | 0 | 0 | 0 |
+       1 | 1 | 1 | 1 | 1 | 1 |
+       2 | 1 | 1 | 2 | 2 | 3 |
+       3 | 1 | 1 | 2 | 3 | 4 |
+         |---|---|---|---|---|
     */
 
     const int n = coins.size();
     vector<vector<int>> dp(n+1, vector<int>(sum+1));
 
-    for(int i=0; i<=n; i++) dp[i][0] = 1;
-    for(int j=1; j<=sum; j++) dp[0][j] = 0;
+    for(int i=0; i<=n; i++) dp[i][0] = 1; // base case where sum if zero
+    for(int j=1; j<=sum; j++) dp[0][j] = 0; // base case where number of coins to choose from is zero i.e. coins array is empty
 
     for(int i=1; i<=n; i++){
         for(int j=1; j<=sum; j++){
