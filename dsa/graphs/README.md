@@ -88,4 +88,6 @@ int main(){
     - Broadcast
 
 - Applications of DFS :
-    - island problem on leetcode
+    - island problem
+    - rotten oranges
+    - island water
