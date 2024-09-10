@@ -60,7 +60,7 @@ stores only connected node unlike matrix Representation
         - add an edge - 0(1)
         - remove an edge - 0(v)
 
-- representation in c++
+- Graph representation in c++
 ```c++
 
 void addEdge(vector<int>adj[], int u, int v){
@@ -79,8 +79,6 @@ int main(){
 }
 
 ```
-
-
 - Applications of BFS :
     - shortest path in an unweighted path
     - crawlers in search engine
