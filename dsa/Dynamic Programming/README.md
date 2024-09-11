@@ -1,6 +1,5 @@
 ## Dynamic Programming
-
-    Dynamic programming is optimization over plain recursion. Idea of dynamic programming is to reuse the solution where there are overlapping subproblems.
+Dynamic programming is optimization over plain recursion. Idea of dynamic programming is to reuse the solution where there are overlapping subproblems.
 
 ### ways to implement DP solutions
     - Memoization ( top down )
@@ -8,11 +7,8 @@
 
 Fibonacci series :
 
-1. Memoization Solution
-
-Time - `O(n)`
-
-space - `O(n)`
+1. Memoization Solution :
+Time - `O(n)`,  space - `O(n)`
 
 ```cpp
 vector<int>mem(n+1, -1); // public vector
@@ -49,8 +45,8 @@ int fib(n){
 ```
 
 #### Dynamic Programming problems :
-- Longest common subsequence and variations
-- Edit distance
+- [Longest common subsequence and variations](./longest_common_subsequence.cpp)
+- [Edit distance](./edit_distance.cpp)
 - Longest increasing subsequence and variations
 - Maximum cut
 - Minimum coins
