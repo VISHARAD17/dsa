@@ -51,7 +51,7 @@ int fib(n){
 - Maximum cut
 - Minimum coins
 - [Minimum jumps to reach end](./minimum_jumps_to_reach_at_end.cpp)
-- 0-1 knapsack
+- [0-1 knapsack](./0-1_knapsack_problem.cpp)
 - Optimal strategy 
 - Egg dropping problem
 - Count BSTs with n keys
