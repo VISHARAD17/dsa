@@ -9,8 +9,14 @@
  *               |_____2_____|
  *
  * time complexity : O(n)  space complexity : O(n)
- *
- * */
+
+ test case:
+6
+3 4 2 1 2 1
+
+ans : 2
+*/
+
 
 
 #include <climits>
@@ -59,6 +65,9 @@ int main(){
     vector<int>arr(n);
     for(int &x: arr) cin >> x;
     
-    int ans = minJumps(arr, n);
-    cout << "min. number of jumps : " << ans << "\n";
+    int ansDP = minJumps(arr, n);
+    int ansRecursive = minJumpsRecursive(arr, n);
+
+    cout << "min. number of jumps (recursively) : " << ansDP << "\n";
+    cout << "min. number of jumps : " << ansRecursive << "\n";
 }
