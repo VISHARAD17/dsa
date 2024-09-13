@@ -50,7 +50,7 @@ int fib(n){
 - Longest increasing subsequence and variations
 - Maximum cut
 - Minimum coins
-- Minimum jumps to reach end 
+- [Minimum jumps to reach end](./minimum_jumps_to_reach_at_end.cpp)
 - 0-1 knapsack
 - Optimal strategy 
 - Egg dropping problem
