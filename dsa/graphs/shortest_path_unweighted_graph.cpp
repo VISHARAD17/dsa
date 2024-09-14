@@ -1,5 +1,5 @@
 /*
- * shorted path in undirected graph
+ * shorted path in unweighted graph
  *
  * problem : shorted distance from source to every other vertex ( use bfs )
  *
