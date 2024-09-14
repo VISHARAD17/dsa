@@ -1,7 +1,8 @@
-### Graphs
+## Graphs
 
-- Representation of graphs
-``vector<vector<int>> g(_size_)`` or `vector<int> g[]` - can be represented as an array of vectors or as a vector of vectors.
+- Representation of graphs:
+    - ``vector<vector<int>> g(_size_)``
+    - `vector<int> g[]` - can be represented as an array of vectors or as a vector of vectors.
 
 - degree of a node is the number of edges at that node
 
@@ -9,19 +10,20 @@
 
 - directed cyclic graph ( DAG )
 
-- # Adjacency matrix
+### Adjacency matrix
 
----
+```
     0 
      \
       2 -- 3  
      /
     1
----
+
 total no. of vertices - 4
+```
  
 Adjacency matrix- 
-```cmd
+```
     0 1 2 3
   ----------
 0 | 0 1 1 0
@@ -49,16 +51,16 @@ stores only connected node unlike matrix Representation
 3 -> 2
 ```
 
-- properties of Adjacency array/list 
-    * space : 0(v+e)
-        - undirected : 0(v+2*e)
-        - directed : 0(v+e)
-    * operations : 
-        - check if there is an edge from u to v - 0(v)
-        - find all adjacent to u - 0(degree(u))
-        - find degree of u - 0(1)
-        - add an edge - 0(1)
-        - remove an edge - 0(v)
+#### properties of Adjacency array/list:
+* space : 0(v+e)
+    - undirected : 0(v+2*e)
+    - directed : 0(v+e)
+* operations : 
+    - check if there is an edge from u to v - 0(v)
+    - find all adjacent to u - 0(degree(u))
+    - find degree of u - 0(1)
+    - add an edge - 0(1)
+    - remove an edge - 0(v)
 
 - Graph representation in c++
 ```c++
@@ -91,3 +93,4 @@ int main(){
     - island problem
     - rotten oranges
     - island water
+
