@@ -3,6 +3,7 @@
 ### DSA 
 - [Dynamic Programming](./dsa/Dynamic Programming/README.md) 
 - [Graph](./dsa/graphs/README.md)
+- [Hashing](./dsa/hashing/README.md)
 
 ### CS-theory notes
 - [Operating systems](./theory/operating systems/README.md)
