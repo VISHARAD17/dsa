@@ -81,16 +81,17 @@ int main(){
 }
 
 ```
-- Applications of BFS :
-    - shortest path in an unweighted path
-    - crawlers in search engine
-    - peer to peer network
-    - social networking search
-    - cycle detection ( DFS can also be used)
-    - Broadcast
-
-- Applications of DFS :
-    - island problem
-    - rotten oranges
-    - island water
-
+- Problems :
+    - Detect cycle in directed graph 
+    - Detect cycle in un-directed graph 
+    - topological sorting ( kahn's BFS based algorithm )
+    - Topological sorting ( DFS based ) 
+    - shortest path in DAG 
+    - Prim algorithm / minimum spanning tree 
+    - Dijkstra algorithm - shortest path algorithm
+    - Kosaraju'a algorithm 
+    - Bellman ford shortest path algorithm 
+    - Articulation point 
+    - Bridges in graph 
+    - Tarjans algorithm 
+    - Kruskals algorithm

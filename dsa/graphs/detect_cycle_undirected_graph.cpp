@@ -47,7 +47,7 @@ void addEdge(vector<vector<int>> &adj, int u, int v){
 }
 
 int main(){
-    int n = 6; // using 2nd example
+    int n = 6; 
     vector<vector<int>> adj(n); // adjacency matrix representation
 
     // add edges
