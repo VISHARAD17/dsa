@@ -12,7 +12,7 @@
  *   /    \
  *  c      d
  *
- *  to read this tree using dfs output will be A a c b d 
+ *  ans -  A a c b d 
  *
  *  0 -- 1
  *  |    | \
@@ -29,7 +29,7 @@
 using namespace std;
 
 void dfs(vector<vector<int>> &g, vector<bool> &vis, int source){
-    // DFS
+    // visite the source
     vis[source] =  true;
     // print the source
     cout << source << " ";
@@ -48,7 +48,9 @@ void addEdge(vector<vector<int>> &g, int u, int v){
 }
 
 void dfs_for_disconnected_graph(vector<vector<int>> &g, vector<bool> &vis){
-    for(int i=0; i<vis.size(); i++) if(vis[i] == false) dfs(g, vis, i); // only extra change is to add one more loop to check for all nodes
+    for(int i=0; i<vis.size(); i++) 
+        if(vis[i] == false) 
+            dfs(g, vis, i); // only extra change is to add one more loop to check for all nodes
 }
 
 void show_graph(vector<vector<int>> &g){
