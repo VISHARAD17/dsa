@@ -116,4 +116,5 @@ in browser and browsing. Here, we're doing different things within a same browse
     . This can be seen as purely user managed multi-threaded system. Context switching is faster. since, only
     kernel is managing only one thread.
     - Many to Many : Multiple user threads are mapped to multiple kernel threads
+    - 
 

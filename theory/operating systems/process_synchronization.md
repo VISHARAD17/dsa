@@ -5,7 +5,7 @@
 - Processes:
     - independent : has their own address space and works only in that address space
     - co-operative: might need talk to each other. ex. this cmd `ps | grep 'chrome' | wc` lists all 
-    the process, then finds the lines which has chrome in it and then counting words in the outpu. These three 
+    the process, then finds the lines which has chrome in it and then counting words in the output. These three 
     processes needs to communicate with each other in order to produce the output. Here, `grep` take the 
     input from `ps` and `wc` take the input from `grep`
 - this communication has be handled by operating system. Inter-process communication can happen 
