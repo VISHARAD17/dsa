@@ -47,8 +47,9 @@ int fib(n){
 #### Dynamic Programming problems :
 - [Longest common subsequence and variations](./longest_common_subsequence.cpp)
 - [Edit distance](./edit_distance.cpp)
-- Longest increasing subsequence and variations
-- Maximum cut
+- [coin change](./coin_change.cpp)
+- [Maximum cut](./maximum_cuts.cpp)
+- [Min coins](./min_coins.cpp)
 - Minimum coins
 - [Minimum jumps to reach end](./minimum_jumps_to_reach_at_end.cpp)
 - [0-1 knapsack](./0-1_knapsack_problem.cpp)
