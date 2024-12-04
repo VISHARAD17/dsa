@@ -32,7 +32,7 @@ int memoFib(int n){
 time - O(n)
 space - O(n)
 
-```C++
+```cpp
 int fib(n){
     vector<int>dp[n+1];
     //base cases
