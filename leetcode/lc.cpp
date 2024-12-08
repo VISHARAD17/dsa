@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h> 
-#include "TwoSum.h"
+#include "palindrome.h"
 using namespace std;
 
 typedef long long ll;
@@ -15,13 +15,8 @@ const ll MOD = 1e9+7;
 
 void solve(){
     //code
-    vector<int>nums = {1, 2, 3, 4, 5, 6};
-    int target = 9;
-
-    Solution ts;
-    vector<int>result = ts.twoSum(nums, target);
-    for(int &res: result) cout << res << " ";
-    cout << "\n";
+    Solution s;
+    cout << s.isPalindrome(121) << "\n" << s.isPalindrome(-121) << "\n";
 }
 int main()
 {
