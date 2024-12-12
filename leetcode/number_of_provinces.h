@@ -12,7 +12,7 @@ class Solution {
 private:
     void dfs(vector<vector<int>> &isConnected, vector<bool> &vis, int i){
         for(int j=0; j<isConnected.size(); j++){
-            // if there is connection and not visited
+            // check connection and not visited node
             if(!vis[j] and isConnected[i][j] == 1){
                 vis[j] = true;
                 dfs(isConnected, vis, j);
