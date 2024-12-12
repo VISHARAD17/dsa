@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h> 
-#include "palindrome.h"
+#include "special_array_II.hpp"
 using namespace std;
 
 typedef long long ll;
@@ -14,9 +14,13 @@ const ll MOD = 1e9+7;
 #define all(x) (x).begin(), (x).end()
 
 void solve(){
+    // inputs
+    vector<int>nums = {3, 4, 1, 2, 6};
+    vector<vector<int>> q = {{0, 4}};
     //code
     Solution s;
-    cout << s.isPalindrome(121) << "\n" << s.isPalindrome(-121) << "\n";
+    vector<bool>res = s.isArraySpecial(nums, q);
+    for(bool x: res) cout << x << " ";
 }
 int main()
 {
