@@ -28,7 +28,6 @@ public:
                     int sum = accumulate(nums.begin()+startIdx, nums.begin()+endIdx, 0);
                     if(sum > 0) minSum = min(minSum, sum), cout << "sum: " << sum << "\n";
                 }
-                
             }
         }
 
