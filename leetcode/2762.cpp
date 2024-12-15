@@ -1,4 +1,5 @@
 #include <iostream>
+#include <map>
 #include <vector>
 #include <time.h>
 #include <math.h>
@@ -16,8 +17,23 @@ class Solution{
 public:
     long long continuousSubarrays(vector<int>& nums) {
         const int n = nums.size();
-        int ans = 0;
-        for(int i=1; i<=n; i++) ans += (n - i + 1), cout << "ans = "<< ans << "\n";
+        map<int, int>frq;
+        int left = 0, right = 0;
+        long long ans = 0;
+
+        while(right < n){
+            frq[nums[right]]++; // add to the frq map 
+
+            // in the map left will the least and right will be the largest 
+            while(frq.rbegin()->first - frq.begin()->first > 2){
+                // remove the left one 
+                frq[nums[left]]--;
+                if(frq[nums[left]] == 0) frq.erase(nums[left]);
+                left++;
+            }
+            ans += ( right - left + 1);
+            right++;
+        }
         return ans;
     }
 };
@@ -25,7 +41,7 @@ public:
 int main()
 {
     Solution st;
-    vector<int>num = {5, 4, 3, 2};
+    vector<int>num = {5, 4, 2, 4};
     cout << st.continuousSubarrays(num);
     return 0;
 }
