@@ -4,9 +4,7 @@
 #include <queue>
 #include <string>
 #include <unordered_map>
-#include <unordered_set>
 #include <vector>
-#include <algorithm>
 #include <time.h>
 #include <math.h>
 #include <stdio.h>
@@ -39,6 +37,7 @@ private:
     unordered_map<string, double> getMaxAmtForD1(string startCur, unordered_map<string, unordered_map<string, double>> g){
         unordered_map<string, double>maxAmts;
         maxAmts[startCur] = 1.0;
+        int s;
         
         queue<string>q;
         q.push(startCur);
