@@ -38,7 +38,7 @@ private:
         unordered_map<string, double>maxAmts;
         maxAmts[startCur] = 1.0;
         int s;
-        
+
         queue<string>q;
         q.push(startCur);
     
