@@ -8,7 +8,15 @@
     - dynamic size arrays
         - `vector<int>a(n)` -- can give fixed size
         - `vector<int>a` -- dynamic size
-
+        - Time complexity:
+            - insert : `O(n)`
+            - delete : `theta(n)`
+            - search
+                - sorted: `O(log_n)`
+                - unsorted: `O(n)`
+            - update `i_th` element: `O(1)`
+            - get `i_th` element: `O(1)`
+        
 - Main problems:
     - [Second largest element]()
     - [check if array is sorted]()
