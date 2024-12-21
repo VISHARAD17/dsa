@@ -27,10 +27,7 @@ public:
             if(sw.size() <= word.size() and word.substr(0, sw.size()) == sw) return i+1;
         }
         return -1;
-
     }
-
-
 };
 
 int main()
