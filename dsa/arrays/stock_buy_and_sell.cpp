@@ -47,6 +47,12 @@ public:
 
     int buyAndSellStock(vector<int>&nums){
         const int n = nums.size();
+        int totalProfit = 0;
+        for(int i=1; i<n; i++){
+            // profit will be the increasing curve -- on the graph of thr stock prices
+            if(nums[i] > nums[i-1]) totalProfit += (nums[i] - nums[i-1]);
+        }
+        return totalProfit;
     }
 };
 
@@ -55,5 +61,6 @@ int main()
     vector<int>nums = {1, 5, 3, 8, 12};
     Solution st;
     cout << "naive sol : " << st.naive_buyAndSellStock(nums, 0, nums.size()-1) << "\n";
+    cout << "optimized sol : " << st.buyAndSellStock(nums) << "\n";
     return 0;
 }
