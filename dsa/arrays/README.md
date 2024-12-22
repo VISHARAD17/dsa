@@ -18,12 +18,15 @@
             - get `i_th` element: `O(1)`
         
 - Main problems:
-    - [Second largest element]()
-    - [check if array is sorted]()
-    - [reverse an array]()
+    - [Second largest element](./second_largest_element_array.cpp)
+    - [check if array is sorted](./check_if_arrays_is_sorted.cpp)
+    - [reverse an array](./reverse_array_elements.cpp)
     - [remove duplicates from a sorted array]()
     - [move zeros to end]()
     - [left rotate an array by one]()
     - [left rotate an array by D places]()
     - [Leaders in an array problem]()
     - [maximum differece problem]()
+
+
+[Go to main](./../../README.md)
