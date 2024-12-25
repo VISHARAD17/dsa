@@ -19,7 +19,7 @@ const ll MOD = 1e9+7;
 class Solution{
 public:
     void maxDiffInOrder(vector<int>&nums){
-        // INFO: keep track of min element so fat
+        // INFO: keep track of min element so far
         const int n = nums.size();
         int maxDiff = INT_MIN, minEleSoFar = nums[0];
 
