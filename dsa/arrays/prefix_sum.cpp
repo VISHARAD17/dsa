@@ -36,6 +36,8 @@ public:
 int main()
 {
     vector<int>nums = {2, 8, 3, 9, 6, 5, 4};
+    vector<int>nums2 = {3, 4, 8, -9, 20, 6};
+
     Solution st;
     st.prefixSum(nums, 0, 2);
     st.prefixSum(nums, 1, 3);
