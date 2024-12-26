@@ -1,8 +1,9 @@
 # DSA and theory notes
 
 ### DSA 
+- [Arrays](./dsa/arrays/README.md)
 - [Dynamic Programming](./dsa/dynamic_programming/README.md) 
-- [Graph](./dsa/graphs/README.md)
+- [Graph](./dsa/graph/README.md)
 - [Hashing](./dsa/hashing/README.md)
 
 ### CS-theory notes
