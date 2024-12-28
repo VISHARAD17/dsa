@@ -1,24 +1,9 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
-#include <sstream>
-#include <queue>
-#include <deque>
-#include <bitset>
-#include <iterator>
-#include <list>
-#include <stack>
-#include <map>
-#include <set>
-#include <functional>
-#include <numeric>
-#include <utility>
-#include <limits>
 #include <time.h>
 #include <math.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <assert.h> 
 using namespace std;
@@ -34,8 +19,54 @@ class Solution{
  * suffix of "abcd" -> "", "d", "cd", "bcd", "abcd"
  * */
 public:
-    void LongestProperPrefixSuffix(vector<int>&nums){
-        const int n = nums.size();
+    // lps_i -> for array of length i maximum value of string which proper prefix as well as a suffix
+    void longestProperPrefixSuffix(string str){
+        const int n = str.size();
+        vector<int>lps(n, 0);
+        int len = 0;
+
+        lps[0] = 0;
+        int i=1;
+        while(i<n){
+            if(str[i] == str[len]){
+                len++;
+                lps[i] = len;
+                i++;
+            }
+            else{
+                if(len == 0){
+                    lps[i] = 0;
+                    i++;
+                }
+                else{
+                    len = lps[len-1];
+                }
+            }
+        }
+        cout << "efficient lsp: ";
+        for(int &x: lps) cout << x << " ";
+        cout << "\n";
+    }
+
+    int naiveLongestProperPrefixSuffix(string str, int n){
+        for(int len=n-1; len>0; len--){
+            bool flag = true;
+            for(int i=0; i<len; i++){
+                if(str[i] != str[n-len+i]) flag = false;
+            }
+            if(flag) return len;
+        }
+        return 0;
+    }
+
+    void naiveFillLPS(string str){
+        const int n = str.size();
+        vector<int>lsp(n, 0);
+
+        for(int i=0; i<n; i++) lsp[i] = naiveLongestProperPrefixSuffix(str, i+1);
+        cout << "lsp using naive method :";
+        for(int &x: lsp) cout << x << " ";
+        cout << "\n";
     }
 
 };
@@ -43,5 +74,8 @@ public:
 int main()
 {
     Solution st;
+    string str = "aaabaaaac";
+    st.naiveFillLPS(str);
+    st.longestProperPrefixSuffix(str);
     return 0;
 }
