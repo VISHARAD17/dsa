@@ -7,7 +7,7 @@
 - [Hashing](./dsa/hashing/README.md)
 - [Math](./dsa/math/README.md)
 - [bit manipulation](./dsa/bit_manipulation/README.md)
--[]()
+- [Matrix](./dsa/matrix/README.md)
 
 ### CS-theory notes
 - [Operating systems](./theory/operating_systems/README.md)
