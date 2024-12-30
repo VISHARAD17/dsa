@@ -46,7 +46,11 @@ ex. for 3 using 4 bit representation
 
 #### Problems:
 - [Check if k_th bit is set or not](./check_if_kth_bit_set_or_not.cpp)
--[]()
+- [count set bit](./count_set_bits.cpp)
+- [find one odd occuring element](./one_odd_occuring.cpp)
+- [find two odd occuring elements](./two_odd_occuring_nums.cpp)
+- [check if a number if power of two or not](./power_of_two.cpp)
+- [print power set for a given string](./power_set.cpp)
 
 
 [main menu](../../README.md)
