@@ -96,3 +96,6 @@ int main(){
     - Bridges in graph 
     - Tarjans algorithm 
     - Kruskals algorithm
+
+
+[go to main](../../README.md)
