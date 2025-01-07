@@ -58,6 +58,14 @@ int indexOfLastOccurence(vector<int>a, int x){
 
 }
 
+int countOoccurences(vector<int>&nums, int x){
+    int first = indexOfFirstOccurence(nums, x);
+    if(first == -1) return 0;
+    
+    int last = indexOfLastOccurence(nums, x);
+    return last-first+1;
+}
+
 int firstOccRecur(vector<int> a, int x, int low, int high){
     if(low < high) return -1;
 
@@ -71,8 +79,11 @@ int firstOccRecur(vector<int> a, int x, int low, int high){
 
 
 int main(){
-    int n, x;
-    cin >> n >> x;
-    vector<int>a(n);
-    for(auto &x: a) cin >> x;
+    vector<int>nums ={1, 10, 10, 10, 20, 30, 40, 40, 50};
+    cout << "for array :";
+    for(auto &x: nums) cout << x << " ";
+    cout << "\n";
+    cout << "index of first occurence: " << indexOfFirstOccurence(nums, 10) << "\n";
+    cout << "index of last occurence: " << indexOfLastOccurence(nums, 10) << "\n";
+    cout << "number of occurence " << countOoccurences(nums, 10) << "\n";
 }

@@ -1,5 +1,5 @@
 /*
- * find square root or nearest integer to the square root using binary search
+ * find square root or nearest integer to the given number using binary search
  *
  * */
 
