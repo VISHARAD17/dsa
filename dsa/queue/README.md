@@ -27,3 +27,7 @@
         - deque
         - priority queue (heap)
         - Doubly ended priority queue 
+
+Problems:
+    - [generate numbers with given digits](./generate_numbers_with_given_digits.cpp)
+    - [reversing given queue](./reversing_queue.cpp)
