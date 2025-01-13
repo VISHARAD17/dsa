@@ -35,3 +35,7 @@
         - `dq.pop_back()`
         - `dq.size()`
     - `dq.erase()` and `dq.insert()` at a given index is O(n) operation
+
+Problems:
+- [first circular tour](./first_circular_tour.cpp)
+- [maximum of all subarrays of size k](./maximum_of_all_subarrays_of_size_k.cpp)
