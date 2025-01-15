@@ -1,27 +1,11 @@
 /* 1769 minimum number of operations to move all balls to each box */
 
-
 #include <iostream>
 #include <string>
 #include <vector>
-#include <algorithm>
-#include <sstream>
-#include <queue>
-#include <deque>
-#include <bitset>
-#include <iterator>
-#include <list>
-#include <stack>
-#include <map>
-#include <set>
-#include <functional>
-#include <numeric>
-#include <utility>
-#include <limits>
 #include <time.h>
 #include <math.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <assert.h> 
 using namespace std;
@@ -35,8 +19,17 @@ class Solution{
 public:
     vector<int> minOperations(string boxes){
         const int n = boxes.size();
+        vector<int>ans(n, 0);
 
-        vector<int>left(n, 0), right(n, 0);
+        for(int i=0; i<n; i++){
+            if(boxes[i] == '1'){
+                for(int j=0; j<n; j++){
+                    ans[j] += abs(i-j);
+                }
+            }
+        }
+
+        return ans;
     }
 
 };
@@ -44,5 +37,8 @@ public:
 int main()
 {
     Solution st;
+    vector<int>res = st.minOperations("110");
+    for(auto &x: res) cout << x << " ";
+    cout << "\n";
     return 0;
 }
