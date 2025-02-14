@@ -30,22 +30,23 @@
 and an index in an array
     ``` 
     ---------------     -----------------
-    | universe of | --> | hash function | --> usable array index ( for the array known as hash table)
-    | keys        |     -----------------
+    | universe of | --> | hash function | --> usable array index 
+    | keys        |     -----------------    ( for the array known as hash table )
     ---------------
-
     ```
-- how hash functions works ?
+---
+- **How hash functions should be :**
     - should always map a large key to a small key 
     - should generate value from 0 to m-1 ( m is the possible max val possible for index)
     - should be fast ,O(1) for integers and O(n) for string of length n
     - should uniformly distribute large keys into hash table slots
 
+-------
 - example hash functions:
     - H(large_key) = lage_key % n
     - for string weighted sum 
         H(str) = str[0] * x^0 + str[1] * x^1 + str[2] * x^2 + ... + str[n] * x^n
-    - 
+    -  
 
 
 

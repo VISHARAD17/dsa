@@ -30,22 +30,29 @@ const ll MOD = 1e9+7;
 
 class Solution{
 public:
-    int getSumOfDigits(int num){
-        int ans = 0;
-        while(num != 0){
-            int rem = num%10;
-            num /= 10;
-            ans += rem;
+    string removeOccurrences(string s, string part){
+        const int n = s.size();
+        vector<char>a;
+
+        for(int i=0; i<n; i++){
+            a.push_back(s[i]);
+            if(a.size() >= part.size() and a.back() == part.back()){
+                string tmp(a.end()-part.size(), a.end());
+                if(tmp == part){
+                    a.erase(a.end()-part.size(), a.end());
+                }
+            } 
         }
+        string ans = "";
+        for(auto &x: a) ans += x;
         return ans;
     }
-
 };
 
 int main()
 {
     Solution st;
-    cout << st.getSumOfDigits(10) << "\n";
-    cout << st.getSumOfDigits(111) << "\n";
+    cout << "1st tc : " << st.removeOccurrences("daabcbaabcbc", "abc") << "\n";
+    cout << "1st tc : " << st.removeOccurrences("axxxxyyyyb", "xy") << "\n";
     return 0;
 }
