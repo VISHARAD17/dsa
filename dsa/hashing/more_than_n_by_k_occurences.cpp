@@ -1,11 +1,11 @@
 /*
- * print the intersection of two unsorted array , but print the array in order as they are in the first array
- *
+ * print elements which are occured more than n/k where n is the size of array
  * */
 
 #include <iostream>
 #include <unordered_map>
 #include <vector>
+#include <utility>
 #include <time.h>
 #include <math.h>
 #include <stdio.h>
@@ -20,23 +20,23 @@ const ll MOD = 1e9+7;
 
 class Solution{
 public:
-    void getIntersection(vector<int> &nums1, vector<int> &nums2){
+    void printEle(vector<int>&arr, int k){
         unordered_map<int, int>hashMap;
-
-        for(int &x: nums2) hashMap[x]++;
-
-        for(int &x: nums1){
-            if(hashMap.find(x) != hashMap.end()) cout << x << " ";
+        for(int &x: arr) hashMap[x]++;
+        const int n = arr.size();
+        int num = n/k;
+        for(auto &x: hashMap){
+            if(x.second > num) cout << x.first << " ";
         }
         cout << "\n";
     }
-
 };
 
 int main()
 {
-    vector<int>nums1 = {10, 15, 20, 25, 30, 50}, nums2 = {30, 5, 15, 80};
+    vector<int>arr = {10,10,10,10,20,20,30};
+    int k=2;
     Solution st;
-    st.getIntersection(nums1, nums2);
+    st.printEle(arr, 2);
     return 0;
 }

@@ -1,5 +1,4 @@
 ### Hashing 
-
 - hashing is used to implement dictionaries where we have key & value pairs
 - provides `search`, `insert` and `delete` operations in O(1) time.
 - all keys are unique 
@@ -237,3 +236,16 @@ we can use chaining which has in general better performace.
         - `O(1)` : hashMap.begin(), hashMap.end(), hashMap.cbegin(), hashMap.cend(), hashMap.size(), hashMap.empty()
         - on average `O(1)`: 
             - insert(), erase(it), erase(), find() --> return iterator if number is present otherwise hashMap.end(), count() --> return 1 if present otherwise 0
+
+#### Problems:
+- [count distinct elements](./count_distinct_elements.cpp)
+- [frq of array elements](./frq_of_arr_elements.cpp)
+- [intersection of two unsorted arrays](./intersection_of_two_unsorted_arr.cpp)
+- [union of two unsorted arrays](./union_of_two_unsorted_arrys.cpp)
+- [Pair with given sum in unsorted array](./pair_with_given_sum_in_unsorted_array.cpp)
+- [subarray with zero sum](./subArray_with_zero_sum.cpp)
+- [subarray with given sum](./subArray_with_given_sum.cpp)
+- [length of longest subarray with given sum](./len_of_longest_subArray_with_given_sum.cpp)
+- [longest subarray with equal 1s and 0s](./longest_subarray_with_equal_ones_and_zeros.cpp)
+- [longest common span with same sum in binary array](./longest_common_span_with_same_sum_in_binary_arr.cpp)
+- [print all elements occured more than n/k time](./more_than_n_by_k_occurences.cpp)
