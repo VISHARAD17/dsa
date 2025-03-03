@@ -2,8 +2,8 @@
 Dynamic programming is optimization over plain recursion. Idea of dynamic programming is to reuse the solution where there are overlapping subproblems.
 
 ### ways to implement DP solutions
-    - Memoization ( top down )
-    - Tabulation ( Bottom up )
+- Memoization ( top down )
+- Tabulation ( Bottom up )
 
 Fibonacci series :
 
@@ -50,17 +50,8 @@ int fib(n){
 - [coin change](./coin_change.cpp)
 - [Maximum cut](./maximum_cuts.cpp)
 - [Min coins](./min_coins.cpp)
-- Minimum coins
 - [Minimum jumps to reach end](./minimum_jumps_to_reach_at_end.cpp)
 - [0-1 knapsack](./0-1_knapsack_problem.cpp)
-- Optimal strategy 
-- Egg dropping problem
-- Count BSTs with n keys
-- Maximum sum no two consecutive 
-- Subset sum problem 
-- Matrix chain multiplication
-- Palindrome partition
-- Allocate minimum pages
 
 
 [Go to main](./../../README.md)

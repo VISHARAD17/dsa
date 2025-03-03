@@ -68,8 +68,8 @@ int knapsack_01_recursive(vector<int> &weights, vector<int> &val, int n, int w){
     // if weight of the item is more than the capacity simply ignore the item
     if(weights[n-1] > w) return knapsack_01_recursive(weights, val, n-1, w);
     else{
-        // return max between the cases where ( take the item or do not take the item)
-        //             do not take the item                                     take the itesm so reduce the capacity
+        /* return max between the cases where ( take the item or do not take the item)
+        *                             do not take the item                                     take the itesm so reduce the capacity */
         return max(knapsack_01_recursive(weights, val, n-1, w), val[n-1] + knapsack_01_recursive(weights, val, n-1, w-weights[n-1]));
     }
 }
