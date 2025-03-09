@@ -5,6 +5,7 @@ Dynamic programming is optimization over plain recursion. Idea of dynamic progra
 - Memoization ( top down )
 - Tabulation ( Bottom up )
 
+---
 Fibonacci series :
 
 1. Memoization Solution :
@@ -26,6 +27,7 @@ int memoFib(int n){
     return mem[n];
 }
 ```
+---
 
 2. Tabulation Solution
 
@@ -43,6 +45,7 @@ int fib(n){
     return dp[n];
 }
 ```
+---
 
 #### Dynamic Programming problems :
 - [Longest common subsequence and variations](./longest_common_subsequence.cpp)

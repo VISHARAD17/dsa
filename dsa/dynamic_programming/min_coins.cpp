@@ -1,5 +1,5 @@
 /*
- * Minimum no. of coins ( given unlimited supply of coins ) to make a given sum
+ * Minimum no. of coins ( given unlimited supply of each type of coins ) to make a given sum
  *
  * */
 
@@ -47,13 +47,12 @@ int recur_minCoins(vector<int>arr, int n, int sum){
 
 int main(){
 
-    int n, sum;
-    cin >> n >> sum;
-
-    vector<int>arr(n);
-    for(auto &x: arr) cin >> x;
-
-    cout << "recur_sol : " << recur_minCoins(arr, n, sum) << "\n";
+    vector<int>arr = {2, 3, 5, 6};
+    int sum = 10;
+    cout << "sum: " << sum << " coins arr: ";
+    for(int &x: arr) cout << x << " ";
+    cout << "\n";
+    cout << "recur_sol : " << recur_minCoins(arr, arr.size(), sum) << "\n";
     cout << "DP sol : " << minCoins(arr, sum) << "\n";
     return 0;
 }
