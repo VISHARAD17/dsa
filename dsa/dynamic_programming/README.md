@@ -59,7 +59,8 @@ int fib(n){
 - Variations of LIS(Longest increasing subsequence):
     - [maximum sum of increasing subsequence](./maximum_sum_increasing_subsequence.cpp)
     - [Maximum length of bitonic subsequence](./maximum_len_of_bitonic_subsequence.cpp)
-    - [Building bridges]
+    - [Building bridges](./building_bridges.cpp)
+    - [Longest chain of pairs]()
 
 
 

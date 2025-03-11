@@ -7,26 +7,11 @@
 
 
 #include <iostream>
-#include <string>
 #include <vector>
 #include <algorithm>
-#include <sstream>
-#include <queue>
-#include <deque>
-#include <bitset>
-#include <iterator>
-#include <list>
-#include <stack>
-#include <map>
-#include <set>
-#include <functional>
-#include <numeric>
-#include <utility>
-#include <limits>
 #include <time.h>
 #include <math.h>
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 #include <assert.h> 
 using namespace std;
@@ -51,7 +36,7 @@ public:
 
         vector<int>lis(n);
         lis[0] = 1;
-        for(int i=0; i<n; i++){
+        for(int i=1; i<n; i++){
             lis[i] = 1;
 
             for(int j=0; j<i; j++){

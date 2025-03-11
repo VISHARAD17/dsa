@@ -28,9 +28,9 @@ private:
     /*
      * here, instead of returning max LIS, return LIS array
      * */
+    // time - O(n^2), space - O(n)
     vector<int> LIS(vector<int>&a){
         const int n = a.size();
-        // time - O(n^2), space - O(n)
         vector<int>lis(n);
         lis[0] = 1; // base case 
 
