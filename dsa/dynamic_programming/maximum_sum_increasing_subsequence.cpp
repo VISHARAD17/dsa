@@ -1,9 +1,7 @@
 /*
  * maximum sum increasing subsequnce - max sum of increasing subsequence
  * - variation of LIS
- * - same logic as LIS, instead of computing len, using ele value
- * 
- 
+ * - same logic as LIS, instead of computing len, using element value
  * */
 
 
@@ -28,17 +26,7 @@ int maxSumSub(vector<int>arr){
 }
 
 int main(){
-    int n;
-    cin >> n;
-    vector<int>a(n);
-    for(auto &x: a) cin >> x;
-    
-    /*
-     * input:
-     * 6
-     * 3, 20, 4, 6, 7, 30
-     * ans = 53
-     * */
-
+    vector<int>a =  {3, 20, 4, 6, 7, 30};
+    // ans : 13
     cout << maxSumSub(a);
 }

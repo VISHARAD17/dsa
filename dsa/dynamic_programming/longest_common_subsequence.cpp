@@ -1,6 +1,6 @@
 /*
  * LCS - longest common subsequence
- * Subsequence - charactors in the same order which may not be contiguous ( picking 0 or more charactors)
+ * Subsequence - charactors in the same order which may not be contiguous ( picking 0 or more charactors, but order should be maintained)
  * subtring - contiguous charactors of a string
  *
  * problem : length of longest common subsequence

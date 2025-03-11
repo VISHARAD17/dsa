@@ -55,6 +55,7 @@ int fib(n){
 - [Min coins](./min_coins.cpp)
 - [Minimum jumps to reach end](./minimum_jumps_to_reach_at_end.cpp)
 - [0-1 knapsack](./0-1_knapsack_problem.cpp)
+- [Longest increasing subsequence](./logest_increasing_subsequence.cpp)
 
 
 [Go to main](./../../README.md)
