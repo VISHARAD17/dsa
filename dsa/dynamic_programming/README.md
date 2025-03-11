@@ -56,6 +56,11 @@ int fib(n){
 - [Minimum jumps to reach end](./minimum_jumps_to_reach_at_end.cpp)
 - [0-1 knapsack](./0-1_knapsack_problem.cpp)
 - [Longest increasing subsequence](./logest_increasing_subsequence.cpp)
+- Variations of LIS(Longest increasing subsequence):
+    - [maximum sum of increasing subsequence](./maximum_sum_increasing_subsequence.cpp)
+    - [Maximum length of bitonic subsequence](./maximum_len_of_bitonic_subsequence.cpp)
+    - [Building bridges]
+
 
 
 [Go to main](./../../README.md)
