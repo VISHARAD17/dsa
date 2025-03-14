@@ -26,7 +26,7 @@ public:
     /*
      * sol: 
      * - sort the array based on the first element
-     * - take LIS of second elements ( but keep a check to compare first element of pair with first element of previous pair)
+     * - take LIS of second elements ( but keep a check to compare first element of pair with second element of previous pair)
      * */
     int longestChainOfPairs(vector<vector<int>>&pairs){
         const int n = pairs.size();
@@ -41,8 +41,8 @@ public:
 
             for(int j=0; j<i; j++){
                 // only change in LIS code apart from sorting part
-                // compare the first elements of the pairs
-                if(pairs[i][0] > pairs[j][0]) lis[i] = max(lis[j]+1, lis[i]);
+                // compare the first element of the ith pair with second element of the j_th pair
+                if(pairs[i][0] > pairs[j][1]) lis[i] = max(lis[j]+1, lis[i]);
             }
         }
         return *max_element(lis.begin(), lis.end());

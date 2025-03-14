@@ -52,6 +52,7 @@ int main(){
     cout << "sum: " << sum << " coins arr: ";
     for(int &x: arr) cout << x << " ";
     cout << "\n";
+    cout << "expected ans: 2\n";
     cout << "recur_sol : " << recur_minCoins(arr, arr.size(), sum) << "\n";
     cout << "DP sol : " << minCoins(arr, sum) << "\n";
     return 0;

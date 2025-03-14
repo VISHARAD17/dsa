@@ -1,8 +1,6 @@
 /*
  * Maximum cuts :
  * Given a rod of length n and three values a, b & c. Find out maximum cuts in the rod such that length of every cut is either a or b or c
- * 
- * 1)  a, b, c    ans = 
  *
  * */
 
@@ -42,9 +40,8 @@ int maxCutRecur(int n, int a, int b, int c){
 
 
 int main(){
-    int n, a, b, c;
-    cin >> n >> a >> b >> c;
-
-    cout << "Maximum cuts" << maximumCuts(n, a, b, c);
+    int n = 5, a=1, b=2, c=3;
+    cout << "expected ans: 5\n";
+    cout << "Maximum cuts" << maximumCuts(n, a, b, c) << "\n";
     return 0;
 }
