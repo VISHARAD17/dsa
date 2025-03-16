@@ -62,7 +62,12 @@ int fib(n){
     - [Building bridges](./building_bridges.cpp)
     - [Longest chain of pairs]()
 - [0-1 kanpsack problem](./0-1_knapsack_problem.cpp)
-- [Optimal strategy for a game]()
+- [Optimal strategy for a game](./optimal_strategy_for_a_game.cpp)
+- [Egg dropping puzzel](./egg_dropping_puzzle.cpp)
+- [count BSTs with n keys](./count_BSTs_with_n_keys.cpp)
+- [maximum sum with no two consecutives](./max_sum_with_no_2_consecutive.cpp)
+- [subset sum problem](./subset_sum.cpp)
+- [matrix chain multiplication](./matrix_chain_multiplication.cpp)
 
 
 
