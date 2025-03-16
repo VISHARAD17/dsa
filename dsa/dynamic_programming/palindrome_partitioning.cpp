@@ -45,6 +45,7 @@ public:
         return res;
     }
 
+    // time complexity - O(n^3), space - O(n^2)
     int minCutsToMakePalindrome(string s){
         const int n = s.size();
         vector<vector<int>>dp(n, vector<int>(n, 0));
