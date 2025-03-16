@@ -25,9 +25,8 @@ ans : 2
 using namespace std;
 
 int minJumps(vector<int>&arr, const int n){
-    vector<int>dp(n); // dp[i] -> min. jumps to reach index i form 0;
+    vector<int>dp(n, INT_MAX); // dp[i] -> min. jumps to reach index i form 0;
     dp[0] = 0; // base case
-    for(int i=1; i<n; i++) dp[i] = INT_MAX;
 
     for(int i=1; i<n; i++){
         for(int j=0; j<i; j++){
@@ -60,14 +59,10 @@ int minJumpsRecursive(vector<int>&arr, int n){
 
 int main(){
 
-    int n;
-    cin >> n;
-    vector<int>arr(n);
-    for(int &x: arr) cin >> x;
-    
-    int ansDP = minJumps(arr, n);
-    int ansRecursive = minJumpsRecursive(arr, n);
+    vector<int>arr = {3,4,2,1,2,1};
+    int ansDP = minJumps(arr, arr.size());
+    int ansRecursive = minJumpsRecursive(arr, arr.size());
 
     cout << "min. number of jumps (recursively) : " << ansDP << "\n";
-    cout << "min. number of jumps : " << ansRecursive << "\n";
+    cout << "min. number of jumps (dp solution) : " << ansRecursive << "\n";
 }
