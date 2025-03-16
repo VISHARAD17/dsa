@@ -43,19 +43,18 @@ int recur_edit_distance(string s1, string s2, int n, int m){
     if(m == 0) return n;
 
     if(s1[n-1] == s2[m-1]) return recur_edit_distance(s1, s2, n-1, m-1);
-        //                    replace                            insert                             delete
+    // 1 + min(delete, insert, replace)
     return 1 + min({recur_edit_distance(s1, s2, n-1, m), recur_edit_distance(s1, s2, n, m-1), recur_edit_distance(s1, s2, n-1, m-1)});
 }
 
 int main(){
-    string s1, s2;
-    cin >> s1 >> s2;
-    const int n = s1.size();
-    const int m = s2.size();
+    string s1 = "CAT", s2 = "CUT";
+    int n = s1.size(), m = s2.size();
 
     int recur_ans = recur_edit_distance(s1, s2, n, m);
     int dp_ans = dp_edit_distance(s1, s2);
 
+    cout << "for string s1: " << s1 << " and s2: " << s2 << "\n";
     cout << "recursive ans : " << recur_ans << "\n";
     cout << "dp ans : " << dp_ans << "\n";
     return 0;

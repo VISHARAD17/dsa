@@ -53,13 +53,13 @@ int recur_sol(vector<int> coins,int n, int sum){
 }
 
 int main(){
-    int n, sum;
-    cin >> n >> sum;
-    vector<int>coins(n);
-    for(auto &x: coins) cin >> x;
-    cout << n << " " << sum << " " << "\n";
+    vector<int>coins = {2, 3, 5, 6};
+    int sum = 10;
+    cout << "sum : " << sum << "\n";
     for(auto x: coins) cout << x << " ";
+    cout << "\n";
     // answer : 2
-    cout << "recursive solution : " << recur_sol(coins, n, sum);
+    cout << "recursive solution : " << recur_sol(coins, coins.size(), sum) << "\n";
+    coin_change_dp(coins, sum);
     return 0;
 }

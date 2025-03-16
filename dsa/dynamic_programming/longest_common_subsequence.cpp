@@ -1,6 +1,6 @@
 /*
  * LCS - longest common subsequence
- * Subsequence - charactors in the same order which may not be contiguous ( picking 0 or more charactors)
+ * Subsequence - charactors in the same order which may not be contiguous ( picking 0 or more charactors, but order should be maintained)
  * subtring - contiguous charactors of a string
  *
  * problem : length of longest common subsequence
@@ -9,8 +9,11 @@
  *
  * variations :
  * 1. min insertions and deletions to convert  s1 into s2: LCS - l is the lcs, then n-l deletions and m-l insetions 
- * 2. longest palindromic subsequence : s1 and s2 is reverse of s1, so answere is their lcs
- * 3. shortest common supersequence: need to insert charactors which are not present  so ans is L + (n-L) + (m-L);
+ * 2. longest palindromic subsequence : s1 and s2 is reverse of s1, so answere is their LCS
+ * 3. shortest common supersequence : need to insert charactors which are not present  so ans is L + (n-L) + (m-L);
+ * 4. Longest repeating subsequence : same as LCS with s1 and s2 being the same strings but when charactors matches 
+ *                                    we need to additionally check if their indexes are diff otherwise go to else part and take max
+ * 5. Priting the LCS : traverse from right most bottom cell and traverse back ( refere gfg article )
  * */
 
 #include <algorithm>
@@ -63,10 +66,10 @@ int recursive_lcs(string s1, string s2, int n, int m){
 }
 
 int main(){
-    string s1, s2;
-    cin >> s1 >> s2;
+    string s1 = "AXYZ", s2 = "BAZ"; // ans:AZ
     const int n = s1.size();
     const int m = s2.size();
+    cout << "s1 : " << s1 << " s2 : " << s2 << "\n";
     cout << "recursive solution : " << recursive_lcs(s1, s2, n, m) << "\n";
     cout << "DP solution : " << lcs(s1, s2) << "\n";
     return 0;
