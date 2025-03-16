@@ -61,6 +61,8 @@ int fib(n){
     - [Maximum length of bitonic subsequence](./maximum_len_of_bitonic_subsequence.cpp)
     - [Building bridges](./building_bridges.cpp)
     - [Longest chain of pairs]()
+- [0-1 kanpsack problem](./0-1_knapsack_problem.cpp)
+- [Optimal strategy for a game]()
 
 
 
