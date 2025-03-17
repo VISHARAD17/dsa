@@ -58,7 +58,6 @@ int main(){
     addEdge(adj, 2, 4);
     addEdge(adj, 3, 5);
     addEdge(adj, 5, 4);
-    
     cout << detectCycleDFS(adj);
 
     return 0;

@@ -82,21 +82,21 @@ int main(){
 }
 
 ```
-- Problems :
-    - Detect cycle in directed graph 
-    - Detect cycle in un-directed graph 
-    - shortest path in un-weighted graph
-    - topological sorting ( kahn's BFS based algorithm )
-    - Topological sorting ( DFS based ) 
-    - shortest path in DAG 
-    - Prim algorithm / minimum spanning tree 
-    - Dijkstra algorithm - shortest path algorithm
-    - Kosaraju'a algorithm 
-    - Bellman ford shortest path algorithm 
-    - Articulation point 
-    - Bridges in graph 
-    - Tarjans algorithm 
-    - Kruskals algorithm
+#### Applications of BFS :
+- shortest path in an unweighted graph
+- Crawlers in search engine 
+- peer to peer network ex. bittorrent which is search among your neighbours then their neighbours
+- Social networking search 
+- In Garbage collection (finds memoery reacheble by variable then their variables and finds out which is not reacheble and deletes them)
+- Cycle detection
+- Ford Fulkerson algorithm - maximum flow algorithm
+- Broadcasting ( send signal to your neighbour then their neighbours and so on)
 
+#### DFS:
+- Cycle detection
+- Topological sorting ( make file utility - dependent files has to be run before the main file and so on)
+- Strongly connected components
+- solving puzzle
+- Path finding ( mainly to print the path )
 
 [go to main](../../README.md)

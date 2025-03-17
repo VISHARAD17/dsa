@@ -14,14 +14,13 @@
  * */
 
 
-#include <climits>
 #include<iostream>
 #include <queue>
 #include<vector>
 using namespace std;
 
 void shortedDist(vector<vector<int>> adj, int s){
-    // time & space complexity : 0(v)
+    // time & space complexity : 0(v+e)
     const int n = adj.size();
     vector<int>dist(n, 0);
     vector<bool>vis(n, false);
