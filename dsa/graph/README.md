@@ -5,13 +5,13 @@
     - `vector<int> g[]` - can be represented as an array of vectors or as a vector of vectors.
 
 - degree of a node is the number of edges at that node
-
 - cyclic path in a graph starts and ends on a same node(vertex) in graph
-
+- for `v` no. of vertices:
+    - total no. of edges in Directed graph are `v * (v-1)`
+    - total no. of edges in un-directed graph are `v * (v-1) / 2`
 - directed cyclic graph ( DAG )
 
-### Adjacency matrix
-
+### Graph representation
 ```
     0 
      \
@@ -22,6 +22,7 @@
 total no. of vertices - 4
 ```
  
+#### Adjacency matrix
 Adjacency matrix- 
 ```
     0 1 2 3
@@ -42,7 +43,7 @@ Adjacency matrix-
         - add/remove edge : 0(1)
         - add/remove vertice : 0(v^2)
 
-- # Adjacency array 
+#### Adjacency array 
 stores only connected node unlike matrix Representation
 ```
 0 -> 2

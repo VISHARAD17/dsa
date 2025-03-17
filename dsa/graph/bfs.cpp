@@ -56,7 +56,7 @@ void bfs(vector<vector<int>>adj, int s){
 //     
 //     for(int i=0; i<=vertices; i++){
 //         // do bfs for all non visited 
-//         if(visited[i] == false) bfs_recursive(adj, i, visited);
+//         if(visited[i] == false) bfs(adj, i, visited);
 //     }
 // }
 
