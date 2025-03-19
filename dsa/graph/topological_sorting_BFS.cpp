@@ -76,6 +76,10 @@ int main()
     // build a directed graph
     int n = 5;
     vector<vector<int>> g(5);
+    g[0].push_back(2);
+    g[0].push_back(3);
+    g[1].push_back(3);
+    g[1].push_back(4);
     st.printTopologicalSorting(g, n);
     return 0;
 }
