@@ -99,4 +99,13 @@ int main(){
 - solving puzzle
 - Path finding ( mainly to print the path )
 
+#### Problems: 
+- [bfs](./bfs.cpp)
+- [dfs](./dfs.cpp)
+- [count connected components](./count_connected_components.cpp)
+- [detect cycle in directed graph](./detect_cycle_directed_graph.cpp)
+- [detect cycle in undirected graph](./detect_cycle_undirected_graph.cpp)
+- [detect cycle using kahn algo](./detect_cycle_using_kahn_algo(topological_bfs).cpp)
+- [shortest path in directed acyclic weighted graph](./shortest_path_directed_acyclic_graph(weighted).cpp)
+
 [go to main](../../README.md)
