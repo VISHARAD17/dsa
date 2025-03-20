@@ -28,6 +28,9 @@
 #include <vector>
 using namespace std;
 
+/*
+ * time - O(v+e)
+ * */
 void dfs(vector<vector<int>> &g, vector<bool> &vis, int source){
     // visite the source
     vis[source] =  true;
@@ -54,7 +57,7 @@ void dfs_for_disconnected_graph(vector<vector<int>> &g, vector<bool> &vis){
 }
 
 void show_graph(vector<vector<int>> &g){
-    cout << "Printing graphs ---- \n";
+    cout << "Printing graph ---- \n";
     for(auto &x: g){
         for(auto &y: x) cout << y << " ";
         cout << "\n";
@@ -72,6 +75,14 @@ int main(){
     addEdge(g, 3, 4);
     show_graph(g);
     vector<bool>visited(5, false);
+    /*
+     * if graph is disonnected then we need to call dfs all vertices
+     *
+     * for(int i=0; i<5; i++){
+     *   // to count disconnected components add a counter wherever dfs is called ( no of islands )
+     *   dfs(g, visited, i);
+     * }
+     * */
     dfs(g, visited, 0);
     return 0;
 }
