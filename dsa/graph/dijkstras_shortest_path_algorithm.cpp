@@ -39,7 +39,9 @@ const ll MOD = 1e9+7;
 
 class Solution{
 public:
-    
+    int dijkristraAlgo(){
+        return 0;
+    }
 
 };
 
