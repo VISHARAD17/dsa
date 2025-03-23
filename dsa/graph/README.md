@@ -107,5 +107,9 @@ int main(){
 - [detect cycle in undirected graph](./detect_cycle_undirected_graph.cpp)
 - [detect cycle using kahn algo](./detect_cycle_using_kahn_algo(topological_bfs).cpp)
 - [shortest path in directed acyclic weighted graph](./shortest_path_directed_acyclic_graph(weighted).cpp)
+- [Shortedt path in unweighted graph (Bidirectional)](./shortest_path_unweighted_graph.cpp)
+- [prims algorithm](./prims_algorithm.cpp)
+- [topological sorting BFS](./topological_sorting_BFS.cpp)
+- [topological sorting DFS](./topological_sorting_DFS.cpp)
 
 [go to main](../../README.md)
