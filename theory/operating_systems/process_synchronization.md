@@ -11,21 +11,23 @@
 - this communication has be handled by operating system. Inter-process communication can happen 
 in single process system ( concurrent execution - one after another) or in a muti-process system
 - Process `P_1` executes partially then processe `P_2` executes partially and again process `P_1` runs, this 
-interleaving exexution is called concurrent execution
+interleaving execution is called concurrent execution
 - processes communicate within a system using shared memory ex. global variables
-- we can see different behaviousrs / different unexpected outputs because of race conditions
+- we can see different behaviours / different unexpected outputs because of race conditions
+---
 
 ### Critical Section
 - Race condition : when we have inconsistent values because of different sequence of 
-execution, when two processes are interlived.
+execution, when two processes are inter-lived.
 Also we might get different outputs depending on the order of execution. So, there is no 
 deterministic variable
 - the part where we access shared variable is `critical` section and 
-otherohter part it `not-critical` section
-- hence, we need same machanism to ensure that one process run a critical process 
+other part it `not-critical` section
+- hence, we need same mechanism to ensure that one process run a critical process 
 at a time
 - so we put some logic before (`entry section`) and after (`exist section`) critical section
 - critical section comes when we have write/modify operation on a shared variable
+---
 
 ### Goals of Synchronization mechanism :
 - `Mutual exclusion`: only one process is allowed to enter critical section for execution
@@ -38,6 +40,7 @@ again and again or processes comming after it are getting to use critical sectio
 Hence, there should be bound on waiting for critical section 
 - `performance`: locking mechanism that allows one process at a time to enter into 
 critical section should be fast. Types of locking mechanisms: hardware and software
+---
 
 ### Overview of Synchronization mechanisms :
 - `Disabling interepts` : a process before entiring into a critical section declares 
@@ -61,6 +64,7 @@ they are atomic they uses locks
     section. All the shared variables and the methods modifying shared variables are put 
     in a same class. All methods in that class are declared synchronous. So that, single 
     process / single thread can run at a time.
+---
 
 ### `Lock` mechanism for synchronization :
 - They mechanism are used to build mechanisms like semaphore, Monitors, etc.
@@ -72,6 +76,7 @@ gets premptive before it executes ( just enters and got prempt ) its operation, 
 in critical section, this creates race condition
 - to avoid this there is a hardware solution known as `test and set` or `TSL Lock` -> having an 
 atomic operation with a set of instructions to acquire the lock, so that no one can acquire the lock.
+---
 
 ### Semaphore :
 - in lock mechanism we have to keep running while loop to check the status of the lock, 
@@ -97,6 +102,7 @@ available washroom.
 - In semaphore process do not need to wait, once there is a free slot it gives a signal to wake one of 
 the processes in the queue and ask them to use the available resources
 - this type of semaphore is also called as counting semaphore.
+---
 
 ### Binary semaphore :
 - consists only of a bool and queue
@@ -105,4 +111,49 @@ struct BinSem {
     bool val;
     queue q;
 }
+
+// wait function
+void wait(){
+    // critical section available, acquire it and mark not available
+    if(s.val == 1){
+        s.val = 0
+    }
+    else {
+        1. put process P in q 
+        2. sleep(p)
+    }
+}
 ```
+### Monitors :
+- Built on top of locks and are typically implemented by multi-threaded systems ex. Java 
+- JVM ( Java virtual machine ) for managing threads.
+- Higher level of synchronization than semaphore.
+- if a class has more than 1 synchronization function then that class is a monitor.
+- Access to the shared variables is blocked by monitors only on thread at a time 
+- ex. 
+    ```java 
+        class Account {
+            int balance;
+
+            // sync process
+            void credit(int x){
+                balance += x;
+            }
+
+            // sync process
+            void debit(int x){
+                balance -= x;
+            }
+        }
+    ```
+
+Locks ---> semaphore ---> monitors
+
+### Priority Inversion
+-  consider a case where a low priority task shares a same critical section with a higher priority task,
+ans higher priority task is dependent on the low priority task. So, low task has to finished first to begin high task. 
+But, is medium priority tasks comes then it can preempt the low task, causing problem for high task ( high task cannot be 
+run --> this is an issue ). To tackle this issue, priority inversion comes into picture, when a low priority task is running 
+on which a high priority task depends, then low task inherits the priority of the high task i.e. it also becomes 
+high priority task. Now, a medium priority task cannot preempt/kill it.
+
