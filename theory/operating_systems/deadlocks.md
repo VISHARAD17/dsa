@@ -16,4 +16,5 @@ by the operating system in proper manner. Here, some resources might be non-shar
     - Circular wait
 - if there is deadlock in system, then no progress can happen 
 - Resource allocation graph
-- [resource-allocation-graph](./diagrams/deadlock_resource_allocation_graph.png)
+- ![resource-allocation-graph](./diagrams/deadlock_resource_allocation_graph.png)
+
