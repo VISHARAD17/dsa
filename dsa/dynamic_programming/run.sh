@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 # Compile the provided C++ file to the default output binary a.out
-g++ -std=c++20 "$1"
+g++ -std=c++23 "$1"
 if [ $? -ne 0 ]; then
     echo "Compilation failed."
     exit 1
