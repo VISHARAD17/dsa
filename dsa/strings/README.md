@@ -20,7 +20,3 @@ text - size n and pattern - size m
 - [leftmost non repeating char](./leftmost_non_repeating_element.cpp)
 - [leftmost repeating char](./leftmost_repeating_char.cpp)
 - [anagram](./anagram.cpp)
-- Pattern search 
-    - [naive pattern search]()
-    - something
-
