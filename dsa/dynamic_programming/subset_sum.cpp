@@ -29,7 +29,7 @@ public:
 
         for(int i=1; i<=n; i++){
             for(int j=1; j<=sum; j++){
-                dp[i][j] = dp[i-1][j]; // condition when to do take the element for sum
+                dp[i][j] = dp[i-1][j]; // condition when to do not take the element for sum
                 // if ele is less than or equal to sum then take it
                 if(j-arr[i-1] >= 0) dp[i][j] += dp[i-1][j-arr[i-1]];
             }
