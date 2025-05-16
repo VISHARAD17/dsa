@@ -40,6 +40,7 @@ public:
             for(int j=2; j<=eggs; j++){
                 dp[i][j] = INT_MAX;
 
+                // for each floor
                 for(int x=1; x<=i; x++){
                     //                            egg breaks     egg did not break
                     dp[i][j] = min(dp[i][j], max(dp[x-1][j-1], dp[i-x][j]));

@@ -27,6 +27,23 @@ public:
         cout << "yes\n";
     }
 
+    void whileLoopCheck(string s){
+        const int n = s.size();
+        int i=0, j=n-1;
+        while(i<j){
+            if(s[i] == s[j]){
+                i++;
+                j--;
+            }
+            else{
+                cout << "NO\n";
+                return;
+            }
+        }
+        cout <<  "YES\n";
+        return;
+    }
+
 };
 
 int main()
